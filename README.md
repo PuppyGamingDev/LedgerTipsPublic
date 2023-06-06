@@ -1,5 +1,5 @@
-# RippleTips Discord Bot
-RippleTips is a Discord bot that enables users to be able tp tip eachother mostly from inside Discord utilizing the XUMM API to sign the transactions.
+# LedgerTips Discord Bot
+LedgerTips is a Discord bot that enables users to be able tp tip eachother mostly from inside Discord utilizing the XUMM API to sign the transactions.
 
 ## Initial setup
 Create a new file called `.env` and paste the following into it
@@ -23,7 +23,7 @@ Once you have all your values, in the console run `node deploy-commands.js` and 
 
 On the Discord Developer Dashboard for your application, navigate to `OAUTH2 > URL Generator` and tick the boxes for `bot` & `application.commands` and copy the URL that is generated below it and paste into your browser to invite the bot to your server. (The bot shouldn't need any extra permissions as all interactions are based on replying to interactions and not actual posting)
 
-Once your bot is in, in the console run `node bot.js` and you should see that it's running when it outputs `RippleTips is running!`
+Once your bot is in, in the console run `node bot.js` and you should see that it's running when it outputs `LedgerTips is running!`
 
 ## Commands
 

@@ -1,5 +1,5 @@
 {
-  "name": "rippletipspublic",
+  "name": "ledgertipspublic",
   "version": "1.0.0",
   "description": "Discord Bot which enables you to tip other users using XUMM Wallet",
   "main": "bot.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PuppyGamingDev/RippleTipsPublic.git"
+    "url": "git+https://github.com/PuppyGamingDev/LedgerTipsPublic.git"
   },
   "author": "PuppyTools",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PuppyGamingDev/RippleTipsPublic/issues"
+    "url": "https://github.com/PuppyGamingDev/LedgerTipsPublic/issues"
   },
-  "homepage": "https://github.com/PuppyGamingDev/RippleTipsPublic#readme",
+  "homepage": "https://github.com/PuppyGamingDev/LedgerTipsPublic#readme",
   "dependencies": {
     "discord.js": "^14.11.0",
     "dotenv": "^16.1.4",

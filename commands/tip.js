@@ -6,7 +6,7 @@ const { xrpToDrops } = require('xrpl')
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("tip")
-        .setDescription("Tip a user linked to RippleTips")
+        .setDescription("Tip a user linked to LedgerTips")
         .addUserOption((option) => option.setName("user").setDescription("The user to tip").setRequired(true))
         .addStringOption((option) => option.setName("amount").setDescription("The amount of XRP to tip the user").setRequired(true))
         .setDMPermission(false),
@@ -17,7 +17,7 @@ module.exports = {
         const amount = parseFloat(interaction.options.getString("amount"));
         const wallet = getWallet(user.id);
         if (!wallet || wallet === undefined) {
-            await interaction.editReply({ content: `This user is not linked to RippleTips, why not suggest to them to use **/link** ?`, ephemeral: true });
+            await interaction.editReply({ content: `This user is not linked to LedgerTips, why not suggest to them to use **/link** ?`, ephemeral: true });
             return;
         }
         const xumm = getxumm();
@@ -28,7 +28,7 @@ module.exports = {
             Memos: [
                 {
                     Memo: {
-                        MemoData: Buffer.from(`Tip from ${interaction.user.username} via RippleTips`).toString("hex"),
+                        MemoData: Buffer.from(`Tip from ${interaction.user.username} via LedgerTips`).toString("hex"),
                     },
                 },
             ],

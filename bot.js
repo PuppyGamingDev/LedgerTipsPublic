@@ -24,7 +24,7 @@ for (const file of commandFiles) {
 client.once('ready', async () => {
     await mongoConnect()
     await reloadWallets()
-    console.log(`RippleTips is running!`);
+    console.log(`LedgerTips is running!`);
 });
 
 // Slash Command handling

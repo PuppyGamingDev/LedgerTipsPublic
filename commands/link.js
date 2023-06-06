@@ -4,7 +4,7 @@ const { getxumm, addWallet } = require('../Utilities.js')
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('link')
-        .setDescription('Register your wallet with RippleTips'),
+        .setDescription('Register your wallet with LedgerTips'),
     async execute(interaction) {
         await interaction.deferReply({ ephemeral: true })
         const xumm = getxumm()
@@ -14,7 +14,7 @@ module.exports = {
                 "Memos": [
                     {
                         "Memo": {
-                            "MemoData": Buffer.from(`RippleTips wallet reference. Your Discord ID: ${interaction.user.id}`).toString('hex')
+                            "MemoData": Buffer.from(`LedgerTips wallet reference. Your Discord ID: ${interaction.user.id}`).toString('hex')
                         }
                     }
                 ]
@@ -36,7 +36,7 @@ module.exports = {
                     { name: `Transaction Link`, value: `[Click Here](${subscription.created.next.always})` }
                 )
                 .setImage(subscription.created.refs.qr_png)
-                .setFooter({ text: `RippleTips | powered by puppy.tools`, iconURL: interaction.client.user.avatarURL() })
+                .setFooter({ text: `LedgerTips | powered by puppy.tools`, iconURL: interaction.client.user.avatarURL() })
             // Send Transaction Link and QR Code
             await interaction.editReply({ embeds: [transactEmbed], ephemeral: true })
             // Await for response
@@ -51,7 +51,7 @@ module.exports = {
             // Confirm with user and add to Users Map
             await interaction.editReply({ content: `Linked with wallet **${sender}**`, embeds: [], ephemeral: true })
             await addWallet(interaction.user.id, sender)
-            await interaction.editReply({ content: `Success! You can now receive tips through RippleTips!`, embeds: [], ephemeral: true })
+            await interaction.editReply({ content: `Success! You can now receive tips through LedgerTips!`, embeds: [], ephemeral: true })
             return
         } catch (err) {
             console.log(err)
